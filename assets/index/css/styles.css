@@ -24,6 +24,7 @@ body {
 	flex-wrap: wrap;
 	overflow: hidden;
 	position: relative;
+	z-index: 1;
 }
 .background-section::before {
     content: '';
@@ -59,6 +60,42 @@ body {
 .background-section span:hover {
     background: #0f0;
 	transition: 0s;
+}
+
+.page {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	pointer-events: none;
+}
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+	width: 100vw;
+}
+.sections {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    z-index: 2;
+}
+
+.abme {
+	background: #222;
+	z-index: 3;
+	pointer-events: auto;
+	box-shadow: 0 15px 35px rgba(0,0,0,9);
+	border-radius: 4px;
+	width: 90%;
+	max-width: 640px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
 }
 
 @media (max-width: 900px)
