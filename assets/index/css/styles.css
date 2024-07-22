@@ -6,23 +6,22 @@
 }
 
 :root {
-    --background: #111113;
-    --white: #fdfdfd;
 }
 
 body {
-    background: var(--background);
-    color: var(--white);
+    background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+    background-size: 180% 180%;
+    height: 100vh;
+    animation: gradient-animation 18s ease infinite;
 }
-
-header {
-    height: 70px;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-.logoimg {
-    height: 70px;
-    width: auto;
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
 }
