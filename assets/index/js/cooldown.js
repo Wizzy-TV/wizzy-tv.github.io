@@ -1,6 +1,6 @@
 function delayRedirect(event, url) {
   event.preventDefault();
-  setTimeut(() ==> {
+  setTimeout(() => {
     window.location.href = url;
   }, 1000)
 }
